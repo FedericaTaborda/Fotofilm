@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma</title>
+</head>
+<body onload="startTime()">
+    PLACEHOLDER HORARIOS
+    <br><br>
+    
+    <div id="txt"></div>
+
+    <script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // agrega cero en numeros <10
+      return i;
+    }
+
+
+    function compareDates(){
+      //Placeholder hora
+      const currentDate = startTime();
+
+      //if fecha enviada (comparar fecha actual con entrega, asignar colores)
+    }
+
+    </script>
+
+
+    <a href="index.html"> <button id="btn_id_volver">Volver</button></a>
+</body>
+</html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Trabajo_Nuevo.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+  <script src="Trabajo_Nuevo.js"></script>
+
+<div class="talon">
+    Nombre Cliente <input type="text" name="NCliente">
+    <br>
+    Quien toma el pedido <input type="text" name="NToma">
+    <br>
+    Fecha y hora de entrega <input type="datetime-local" id="meeting-time" name="meeting-time" />
+    <br>
+    Mail <input type="text" name="Mail">
+    <br>
+    Telefono <input type="number" name="Telefono">
+    <br>
+    CUIT <input type="number" name="Cuit">
+    <br>
+    Tipo <input type="text" name="Tipo">
+    <br><br>
+    </div>
+
+   
+<div class="container"><div class="dropdown">
+    Vinilo<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">---
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a tabindex="-1" href="#">---</a></li>
+      	<li class="dropdown-submenu">
+            <a class="test" href="#">UV <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-submenu">
+            <a class="test" href="#">Especial<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-submenu">
+            <a class="test" href="#">Plata<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Vinilo UV, Especial, Plata, Sin corte" class="test">Sin corte</a></li>
+              <li><a href="#" data-message="Vinilo UV, Especial, Plata, Corte completo" class="test">Corte completo</a></li>
+              <li><a href="#" data-message="Vinilo UV, Especial, Plata, Medio corte" class="test">Medio corte</a></li>
+              <li><a href="#" data-message="Vinilo UV, Especial, Plata, Corte medio y completo" class="test">Medio + completo</a></li>
+              <li><a href="#" data-message="Vinilo UV, Especial, Plata, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul>
+          </li><li class="dropdown-submenu">
+            <a class="test" href="#">Oro<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Vinilo UV, Especial, Oro, Sin corte" class="test">Sin corte</a></li>
+              <li><a href="#" data-message="Vinilo UV, Especial, Oro, Corte completo" class="test">Corte completo</a></li>
+              <li><a href="#" data-message="Vinilo UV, Especial, Oro, Medio corte" class="test">Medio corte</a></li>
+              <li><a href="#" data-message="Vinilo UV, Especial, Oro, Corte medio y completo" class="test">Medio + completo</a></li>
+              <li><a href="#" data-message="Vinilo UV, Especial, Oro, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul>
+          </li><li class="dropdown-submenu">
+            <a class="test" href="#">Glitter <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo UV, Especial, Glitter, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Especial, Glitter, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Especial, Glitter, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Especial, Glitter, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Especial, Glitter, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul>
+          </li><li class="dropdown-submenu">
+            <a class="test" href="#">Holografico <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo UV, Especial, Holografico, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Especial, Holografico, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Especial, Holografico, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Especial, Holografico, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Especial, Holografico, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul>
+          </li>
+            </ul>
+          </li>
+              <a class="test" href="#">Standard <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-submenu"><a class="test" href="#">Mate<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo UV, Standard, Mate, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Mate, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Mate, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Mate, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Mate, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+              <li class="dropdown-submenu"><a class="test" href="#">Brillo<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo UV, Standard, Brillo, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Brillo, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Brillo, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Brillo, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Brillo, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+            <li class="dropdown-submenu"><a class="test" href="#">Clear<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo UV, Standard, Clear, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Clear, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Clear, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Clear, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Clear, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+            <li class="dropdown-submenu"><a class="test" href="#">Microperforado<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo UV, Standard, Microperforado, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Microperforado, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Microperforado, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Microperforado, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Microperforado, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+            <li class="dropdown-submenu"><a class="test" href="#">Esmerilado<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo UV, Standard, Esmerilado, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Esmerilado, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Esmerilado, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Esmerilado, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Esmerilado, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+            <li class="dropdown-submenu"><a class="test" href="#">Frost<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo UV, Standard, Frost, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Frost, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Frost, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Frost, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo UV, Standard, Frost, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+            </ul>
+              
+              
+            </ul>
+          </li>
+        <!--  INTERMISION  -->  
+          
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">ECO <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu"><a class="test" href="#">Mate<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo ECO, Mate, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Mate, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Mate, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Mate, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Mate, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+            <li class="dropdown-submenu"><a class="test" href="#">Brillo<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo ECO, Brillo, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Brillo, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Brillo, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Brillo, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Brillo, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+            <li class="dropdown-submenu"><a class="test" href="#">Clear<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo ECO, Clear, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Clear, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Clear, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Clear, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Clear, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+            <li class="dropdown-submenu"><a class="test" href="#">Microperforado<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo ECO, Microperforado, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Microperforado, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Microperforado, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Microperforado, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Microperforado, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+            <li class="dropdown-submenu"><a class="test" href="#">Esmerilado<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo ECO, Esmerilado, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Esmerilado, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Esmerilado, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Esmerilado, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Esmerilado, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+            <li class="dropdown-submenu"><a class="test" href="#">Frost<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-message="Vinilo ECO, Frost, Sin corte" class="test">Sin corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Frost, Corte completo" class="test">Corte completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Frost, Medio corte" class="test">Medio corte</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Frost, Corte medio y completo" class="test">Medio + completo</a></li>
+                <li><a href="#" data-message="Vinilo ECO, Frost, Vinilo de corte" class="test">Vinilo de corte</a></li>
+            </ul></li>
+          
+          <li><a tabindex="-1" href="#" data-message="Vinilo Eco, Sin Corte">Sin corte</a></li>
+          <li><a tabindex="-1" href="#" data-message="Vinilo Eco, Corte completo">Corte completo</a></li>
+          <li><a tabindex="-1" href="#" data-message="Vinilo Eco, Medio corte">Medio corte</a></li>
+          <li><a tabindex="-1" href="#" data-message="Vinilo Eco, Corte medio y completo">Medio + completo</a></li>
+          <li><a tabindex="-1" href="#" data-message="Vinilo Eco, Vinilo de corte">Vinilo de corte</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+   
+
+
+<!-- Lo -->
+<br>
+<div class="container">                              
+  <div class="dropdown">
+    Lonas<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">---
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+    <li><a tabindex="-1" href="#">---</a></li>
+      <li class="dropdown-submenu">
+      	<a class="test" tabindex="-1" href="#">Canvas <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">UV <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="checkbox-list"><a href="#" data-message="Lona Canvas, UV, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+            <a class="test" href="#">ECO <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Canvas, ECO, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+            
+          </li>  
+        </ul>
+        <li class="dropdown-submenu">
+      	<a class="test" tabindex="-1" href="#">Front <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">UV <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Front, UV, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+            <a class="test" href="#">ECO <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Front, ECO, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+          </li>  
+        </ul>
+        <li class="dropdown-submenu">
+      	<a class="test" tabindex="-1" href="#">Back <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">UV <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Back, UV, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+            <a class="test" href="#">ECO <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Back, ECO, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+          </li>  
+        </ul>
+        <li class="dropdown-submenu">
+      	<a class="test" tabindex="-1" href="#">Blackout <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">UV <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Blackout, UV, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+            <a class="test" href="#">ECO <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Blackout, ECO, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+          </li>  
+        </ul>
+        <li class="dropdown-submenu">
+      	<a class="test" tabindex="-1" href="#">Banner Roll Up <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">UV <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Banner Roll Up, UV, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li> 
+            </ul>
+            <a class="test" href="#">ECO <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Banner Roll Up, ECO, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+          </li>  
+        </ul>
+        <li class="dropdown-submenu">
+      	<a class="test" tabindex="-1" href="#">Banner 1 tensor <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">UV <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Banner 1 tensor, UV, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+            <a class="test" href="#">ECO <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Banner 1 tensor, ECO, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+          </li>  
+        </ul>
+        <li class="dropdown-submenu">
+      	<a class="test" tabindex="-1" href="#">Banner 2 tensores <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">UV <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Banner 2 tensores, UV, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+            <a class="test" href="#">ECO <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Banner 2 tensores, ECO, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+          </li>  
+        </ul>
+        <li class="dropdown-submenu">
+      	<a class="test" tabindex="-1" href="#">Banner 2x2 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">UV <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Banner 2x2, UV, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+            <a class="test" href="#">ECO <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-message="Lona Banner 2x2, ECO, Sin extras" class="test">Sin extras</a></li>
+              <li><input type="checkbox" id="checkbox1"><label for="checkbox2">Bolsillos</label></li>
+              <li><input type="checkbox" id="checkbox2"><label for="checkbox3">Ojales</label></li>
+              <li><input type="checkbox" id="checkbox3"><label for="checkbox4">Refilado</label></li>
+              <li><input type="checkbox" id="checkbox4"><label for="checkbox5">Laminado</label></li>
+              <li><input type="checkbox" id="checkbox5"><label for="checkbox6">Brillo</label></li>
+              <li><input type="checkbox" id="checkbox6"><label for="checkbox7">Mate</label></li>
+              <li><input type="checkbox" id="checkbox7"><label for="checkbox8">Alto impacto</label></li>
+            </ul>
+          </li>  
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- PLACAS -->
+<br>
+
+
+<div class="container">            
+  <div class="dropdown">
+    Placas<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">---
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+    <li><a tabindex="-1" href="#">---</a></li>
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">PVC <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">3MM <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="#" data-message="PVC 3mm, Cama plana" class="test">Cama plana</a></li>
+            	<li class="dropdown-submenu">
+              <a class="test" tabindex="-1" href="#">Montado <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+              	<li class="dropdown-submenu">
+                	<a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                      <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    	<li class="dropdown-submenu">
+                        	<a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                            	<ul class="dropdown-menu">
+                                	<li><a href="#" data-message="PVC 3mm, Montado brillo, Laminado brillo, con corte" class="test">Con corte</a></li>
+              						<li><a href="#" data-message="PVC 3mm, Montado rillo, Laminado brillo, sin corte" class="test">>Sin corte</a></li>
+                                </ul>
+                            <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                            	<ul class="dropdown-menu">
+                                	<li><a href="#" data-message="PVC 3mm, Montado brillo, Laminado Mate, con corte" class="test">Con corte</a></li>
+              						<li><a href="#" data-message="PVC 3mm, Montado brillo, Laminado Mate, sin corte" class="test">Sin corte</a></li>
+                                </ul>
+                            <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                            	<ul class="dropdown-menu">
+                                	<li><a href="#" data-message="PVC 3mm, Montado brillo, Laminado Alto transito, con corte" class="test">Con corte</a></li>
+              						<li><a href="#" data-message="PVC 3mm, Montado brillo, Laminado Alto transito, sin corte" class="test">Sin corte</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                    </li>
+                  </ul>
+                    <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                        <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="PVC 3mm, Montado Mate, Laminado Brillo, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="PVC 3mm, Montado Mate, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="PVC 3mm, Montado Mate, Laminado Mate, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="PVC 3mm, Montado Mate, Laminado Mate, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="PVC 3mm, Montado Mate, Laminado Alto transito, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="PVC 3mm, Montado Mate, Laminado Alto transito, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                          </li>
+                      </ul>
+                      </li>
+                    </ul>
+                    <a class="test" tabindex="-1" href="#">Especial <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                        <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="PVC 3mm, Montado Especial, Laminado Brillo, con corte" class="test"></li>
+                            <li><a href="#" data-message="PVC 3mm, Montado Especial, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="PVC 3mm, Montado Especial, Laminado Mate, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="PVC 3mm, Montado Especial, Laminado Mate, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="PVC 3mm, Montado Especial, Laminado Alto transito, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="PVC 3mm, Montado Especial, Laminado Alto transito, con corte" class="test">Sin corte</a></li>
+                                  </ul>
+                          </li>
+                      </ul>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">Alto impacto <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+          	<a class="test" href="#">1MM <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="#" data-message="Alto impacto 1mm, Cama plana" class="test">Cama plana</a></li>
+            	<li class="dropdown-submenu">
+              <a class="test" tabindex="-1" href="#">Montado <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+              	<li class="dropdown-submenu">
+                	<a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                      <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                          <a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#" data-message="Alto impacto 1mm, Montado Brillo, Laminado Brillo, con corte" class="test">Con corte</a></li>
+                          <li><a href="#" data-message="Alto impacto 1mm, Montado Brillo, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                </ul>
+                            <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#" data-message="Alto impacto 1mm, Montado Brillo, Laminado Mate, con corte" class="test">Con corte</a></li>
+                          <li><a href="#" data-message="Alto impacto 1mm, Montado Brillo, Laminado Mate, sin corte" class="test">Sin corte</a></li>
+                                </ul>
+                            <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#" data-message="Alto impacto 1mm, Montado Brillo, Laminado Alto transito, con corte" class="test">Con corte</a></li>
+                          <li><a href="#" data-message="Alto impacto 1mm, Montado Brillo, Laminado Alto transito, sin corte" class="test">Sin corte</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                    </li>
+                  </ul>
+                    <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                        <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 1mm, Montado Mate, Laminado Brillo, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 1mm, Montado Mate, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 1mm, Montado Mate, Laminado Mate, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 1mm, Montado Mate, Laminado Mate, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 1mm, Montado Mate, Laminado Alto transito, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 1mm, Montado Mate, Laminado Alto transito, con corte" class="test">Sin corte</a></li>
+                                  </ul>
+                          </li>
+                      </ul>
+                      </li>
+                    </ul>
+                    <a class="test" tabindex="-1" href="#">Especial <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                        <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 1mm, Montado Especial, Laminado Brillo, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 1mm, Montado Especial, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 1mm, Montado Especial, Laminado Mate, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 1mm, Montado Especial, Laminado Mate, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 1mm, Montado Especial, Laminado Alto transito, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 1mm, Montado Especial, Laminado Alto transito, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                          </li>
+                      </ul>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+              </li>
+            </ul>
+            <a class="test" href="#">0,5MM <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="#" data-message="Alto impacto 0.5, Cama plana" class="test">Cama plana</a></li>
+            	<li class="dropdown-submenu">
+              <a class="test" tabindex="-1" href="#">Montado <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+              	<li class="dropdown-submenu">
+                	<a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                      <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                          <a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#" data-message="Alto impacto 0,5mm, Montado Brillo, Laminado Brillo, con corte" class="test">Con corte</a></li>
+                          <li><a href="#" data-message="Alto impacto 0,5mm, Montado Brillo, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                </ul>
+                            <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#" data-message="Alto impacto 0,5mm, Montado Mate, Laminado Brillo, con corte" class="test">Con corte</a></li>
+                          <li><a href="#" data-message="Alto impacto 0,5mm, Montado Mate, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                </ul>
+                            <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#" data-message="Alto impacto 0,5mm, Montado Brillo, Laminado Alto transito, con corte" class="test">Con corte</a></li>
+                          <li><a href="#" data-message="Alto impacto 0,5mm, Montado Brillo, Laminado Altro transito, sin corte" class="test">Sin corte</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                    </li>
+                  </ul>
+                    <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                        <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 0,5mm, Montado Mate, Laminado Brillo, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 0,5mm, Montado Mate, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 0,5mm, Montado Mate, Laminado Mate, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 0,5mm, Montado Mate, Laminado Mate, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 0,5mm, Montado Mate, Laminado Alto transito, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 0,5mm, Montado Mate, Laminado Alto transito, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                          </li>
+                      </ul>
+                      </li>
+                    </ul>
+                    <a class="test" tabindex="-1" href="#">Especial <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                        <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 0,5mm, Montado Especial, Laminado Brillo, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 0,5mm, Montado Especial, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 0,5mm, Montado Especial, Laminado Mate, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 0,5mm, Montado Especial, Laminado Mate, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Alto impacto 0,5mm, Montado Especial, Laminado Alto transito, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Alto impacto 0,5mm, Montado Especial, Laminado Alto transito, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                          </li>
+                      </ul>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+              </li>
+            </ul>
+          </li>
+          
+        </ul>
+        
+      </li>
+            <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">Foamboard <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">5MM <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="#" data-message="Foamboard 5mm, Cama plana" class="test">Cama plana</a></li>
+            	<li class="dropdown-submenu">
+              <a class="test" tabindex="-1" href="#">Montado <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+              	<li class="dropdown-submenu">
+                	<a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                      <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                          <a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#" data-message="Foamboard 5mm, Montado Brillo, Laminado Brillo, con corte" class="test">Con corte</a></li>
+                          <li><a href="#" data-message="Foamboard 5mm, Montado Brillo, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                </ul>
+                            <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#" data-message="Foamboard 5mm, Montado Brillo, Laminado Mate, con corte" class="test">Con corte</a></li>
+                          <li><a href="#" data-message="Foamboard 5mm, Montado Brillo, Laminado Mate, sin corte" class="test">Sin corte</a></li>
+                                </ul>
+                            <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#" data-message="Foamboard 5mm, Montado Brillo, Laminado Alto transito, con corte" class="test">Con corte</a></li>
+                          <li><a href="#" data-message="Foamboard 5mm, Montado Brillo, Laminado Alto transito, sin corte" class="test">Sin corte</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                    </li>
+                  </ul>
+                    <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                        <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Foamboard 5mm, Montado Mate, Laminado Brillo, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Foamboard 5mm, Montado Mate, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Foamboard 5mm, Montado Mate, Laminado Mate, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Foamboard 5mm, Montado Mate, Laminado Mate, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Foamboard 5mm, Montado Mate, Laminado Alto transito, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Foamboard 5mm, Montado Mate, Laminado Alto transito, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                          </li>
+                      </ul>
+                      </li>
+                    </ul>
+                    <a class="test" tabindex="-1" href="#">Especial <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                        <a class="test" tabindex="-1" href="#">Laminado <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Brillo <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Foamboard 5mm, Montado Especial, Laminado Brillo, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Foamboard 5mm, Montado Especial, Laminado Brillo, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Mate <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Foamboard 5mm, Montado Especial, Laminado Mate, con corte" class="test">Con corte</a></li>
+                            <li><a href="#" data-message="Foamboard 5mm, Montado Especial, Laminado Mate, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                              <a class="test" tabindex="-1" href="#">Alto transito <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-message="Foamboard 5mm, Montado Especial, Laminado Alto transito, con corte" class="test"></li>
+                            <li><a href="#" data-message="Foamboard 5mm, Montado Especial, Laminado Alto transito, sin corte" class="test">Sin corte</a></li>
+                                  </ul>
+                          </li>
+                      </ul>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="message"></div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+</body>
+</html>

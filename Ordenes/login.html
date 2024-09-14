@@ -11,12 +11,20 @@
 
 <body>
     <main>
-        <h1>GRAFICA FOTOFILM</h1>
         <div class="contenedor_principal">
             <div class="caja_login">
+                <h1>GRAFICA FOTOFILM</h1>
                 <h3>Inicia sesión</h3>
-                <p>Ingrese usuario: </p><input type="text" name="usuario">
-                <p>Ingrese contraseña: </p><input type="password" name="contraseña">
+                <form>
+                    <div class="form-group">
+                      <label for="Usuario">Ingrese Usuario:</label>
+                      <input type="text" class="form-control" id="InputUsuario" aria-describedby="UsuarioHelp" placeholder="Nombre de usuario">
+                    </div>
+                    <div class="form-group">
+                      <label for="Contrasenia">Ingrese contraseña</label>
+                      <input type="password" class="form-control" id="InputContrasenia" placeholder="Contraseña">
+                    </div>
+                  </form>
                 <br><br>
                 <a href="index.html"> <button id="btn_id_iniciar_sesion">Acceder</button></a>
             </div>

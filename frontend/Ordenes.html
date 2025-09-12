@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ordenes</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Ordenes</h1>
+        
+        <div class="form-group">
+            <label for="textInput1">Nombre de cliente</label>
+            <input type="text" id="textInput1" class="form-control" style="width: 200px;" placeholder="Ingresa texto aquí" required>
+        </div>
+        <div class="form-group">
+            <label for="textInput2">Quien toma el pedido</label>
+            <input type="text" id="textInput2" class="form-control" style="width: 200px;" placeholder="Ingresa texto aquí" required>
+        </div>
+        <div class="form-group">
+            <label for="textInput3">Mail</label>
+            <input type="text" id="textInput3" class="form-control" style="width: 200px;" placeholder="Ingresa texto aquí" required>
+        </div>
+        <div class="form-group">
+            <label for="textInput4">Teléfono</label>
+            <input type="number" id="textInput4" class="form-control" style="width: 200px;" placeholder="Ingresa texto aquí" required>
+        </div>
+        <div class="form-group">
+            <label for="textInput5">CUIT</label>
+            <input type="number" id="textInput5" class="form-control" style="width: 200px;" placeholder="Ingresa texto aquí" required>
+        </div>
+        <div class="form-group">
+            <label for="textInput6">Fecha y hora de entrega</label>
+            <input type="text" id="textInput6" class="form-control" style="width: 200px;" placeholder="Ingresa texto aquí" required>
+        </div>
+        <div class="form-group">
+            <label for="textInput7">Tipo de factura</label>
+            <input type="text" id="textInput7" class="form-control" style="width: 200px;" placeholder="Ingresa texto aquí" required>
+        </div>
+   
+
+        <div class="form-group">
+            <label for="level0">ViniloP</label>
+            <ul id="level1" class="dropdown">
+                <li class="dropdown-item">
+                    ---
+                <ul class="submenu">
+                <li class="dropdown-item">
+                    Opción A
+                    <ul class="submenu">
+                        <li class="dropdown-item">Lona A1
+                            <ul class="submenu">
+                                <li class="dropdown-item">Lona AA1
+                                    <ul class="submenu">
+                                        <li>Lona AAA1</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Lona A2</li>
+                    </ul>
+                </li>
+                <li class="dropdown-item">
+                    Opción B
+                    <ul class="submenu">                                                 
+                        <li>Lona B1</li>
+                        <li>Lona B2</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+        </ul>
+        </div>
+
+        <div class="form-group">
+            <label for="level1">Vinilo</label>
+            <select id="level1" class="form-control" style="width: 200px;" onchange="updateDropdowns('level1', 'level2')">
+                <option value="">Selecciona</option>
+                <option value="Opción A">Opción A</option>
+                <option value="Opción B">Opción B</option>
+                <option value="Opción C">Opción C</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="level2">Lonas</label>
+            <select id="level2" class="form-control" style="width: 200px;" onchange="updateDropdowns('level2', 'level3')">
+                <option value="">Selecciona</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="level3">Placas</label>
+            <select id="level3" class="form-control" style="width: 200px;" onchange="updateDropdowns('level3', 'level4')">
+                <option value="">Selecciona</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="textInput8">Precio</label>
+            <input type="text" id="textInput8" class="form-control" style="width: 200px;" placeholder="Ingresa texto aquí" required>
+        </div>
+        
+        <button class="btn btn-primary" onclick="generateSentence()">Generar orden</button>
+        <h3 class="mt-4">Orden final:</h3>
+        <p id="sentence"></p>
+        <button class="btn btn-success" onclick="saveToDatabase()">Guardar en base de datos</button>
+        <button class="btn btn-danger" onclick="location.href='index.html'">Volver</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

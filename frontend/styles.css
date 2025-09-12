@@ -1,0 +1,58 @@
+body {
+    background-color: #357bc2;
+    
+}
+  
+/*background-color: #5094d4;
+
+/* Estilo general de los dropdowns */
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Mostrar submenú al pasar el cursor */
+.dropdown-item:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+/* Ocultar todos los submenús por defecto */
+.submenu {
+    display: none;
+    padding-left: 20px;  /* Agregar un poco de espacio a la izquierda para los submenús */
+}
+
+/* Mostrar las opciones A, B, C cuando se pasa el cursor sobre el primer nivel */
+.dropdown-item:hover > .submenu {
+    display: block;
+}
+
+/* Mostrar los submenús cuando se pasa el cursor sobre cada opción */
+.dropdown-item:hover > .submenu > .dropdown-item:hover > .submenu {
+    display: block;
+}
+
+/* Estilo adicional para la interacción */
+.dropdown-item {
+    cursor: pointer;
+}
+

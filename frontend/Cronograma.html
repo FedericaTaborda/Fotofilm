@@ -1,3 +1,43 @@
-En construccion
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cronograma</title>
+</head>
+
+<body>
+  <h1>Cronograma Mensual de Actividades</h1>
+
+  <div class="controls">
+    <label for="mes">Selecciona un mes:</label>
+    <input type="month" id="mes" />
+  </div>
+
+  <div id="calendario"></div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="cerrar-modal" class="cerrar">&times;</span>
+      <h2 id="titulo-modal">Actividades para </h2>
+
+      <div id="lista-actividades"></div>
+
+      <h3>Agregar / Modificar Actividad</h3>
+      <form id="form-actividad">
+        <input type="time" id="hora" required />
+        <input type="text" id="descripcion" placeholder="Descripción" required />
+        <input type="hidden" id="fecha-hidden" />
+        <button type="submit">Guardar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
 <button class="btn btn-danger" onclick="location.href='index.html'">Volver</button>

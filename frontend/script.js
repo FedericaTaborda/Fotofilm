@@ -108,3 +108,183 @@ function logout() {
 }
 
 
+
+//CRONOGRAMA
+
+const calendario = document.getElementById("calendario");
+const selectorMes = document.getElementById("mes");
+const modal = document.getElementById("modal");
+const cerrarModal = document.getElementById("cerrar-modal");
+const tituloModal = document.getElementById("titulo-modal");
+const listaActividades = document.getElementById("lista-actividades");
+const formActividad = document.getElementById("form-actividad");
+const inputHora = document.getElementById("hora");
+const inputDescripcion = document.getElementById("descripcion");
+const inputFecha = document.getElementById("fecha-hidden");
+
+// LocalStorage
+function cargarActividades() {
+  return JSON.parse(localStorage.getItem("actividades")) || {};
+}
+
+function guardarActividades(data) {
+  localStorage.setItem("actividades", JSON.stringify(data));
+}
+
+// Inicial: mostrar mes actual
+window.addEventListener("DOMContentLoaded", () => {
+  const hoy = new Date();
+  const año = hoy.getFullYear();
+  const mes = hoy.getMonth() + 1;
+
+  selectorMes.value = `${año}-${String(mes).padStart(2, "0")}`;
+  generarCalendario(año, mes);
+});
+
+selectorMes.addEventListener("change", () => {
+  const [año, mes] = selectorMes.value.split("-").map(Number);
+  generarCalendario(año, mes);
+});
+
+function generarCalendario(año, mes) {
+  calendario.innerHTML = "";
+
+  const actividades = cargarActividades();
+
+  const primerDiaMes = new Date(año, mes - 1, 1);
+  const ultimoDiaMes = new Date(año, mes, 0);
+  const diasMes = ultimoDiaMes.getDate();
+
+  let primerDiaSemana = primerDiaMes.getDay();
+  primerDiaSemana = primerDiaSemana === 0 ? 6 : primerDiaSemana - 1;
+
+  const nombresDias = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
+  nombresDias.forEach(dia => {
+    const encabezado = document.createElement("div");
+    encabezado.classList.add("dia");
+    encabezado.innerHTML = `<strong>${dia}</strong>`;
+    calendario.appendChild(encabezado);
+  });
+
+  for (let i = 0; i < primerDiaSemana; i++) {
+    const vacio = document.createElement("div");
+    vacio.classList.add("dia", "vacio");
+    calendario.appendChild(vacio);
+  }
+
+  const hoy = new Date();
+  const hoyStr = `${hoy.getFullYear()}-${String(hoy.getMonth() + 1).padStart(2, "0")}-${String(hoy.getDate()).padStart(2, "0")}`;
+
+  for (let dia = 1; dia <= diasMes; dia++) {
+    const fechaStr = `${año}-${String(mes).padStart(2, "0")}-${String(dia).padStart(2, "0")}`;
+    const divDia = document.createElement("div");
+    divDia.classList.add("dia");
+
+    if (fechaStr === hoyStr) {
+      divDia.classList.add("hoy");
+    }
+
+    const titulo = document.createElement("h3");
+    titulo.textContent = dia;
+    divDia.appendChild(titulo);
+
+    if (actividades[fechaStr]) {
+      actividades[fechaStr].forEach(item => {
+        const p = document.createElement("div");
+        p.classList.add("actividad");
+        p.textContent = `${item.hora} - ${item.descripcion}`;
+        divDia.appendChild(p);
+      });
+    }
+
+    divDia.addEventListener("click", () => abrirModal(fechaStr));
+    calendario.appendChild(divDia);
+  }
+}
+
+// Modal
+cerrarModal.addEventListener("click", () => {
+  modal.style.display = "none";
+  formActividad.reset();
+  listaActividades.innerHTML = "";
+});
+
+function abrirModal(fecha) {
+  inputFecha.value = fecha;
+  tituloModal.textContent = `Actividades para ${fecha}`;
+  modal.style.display = "block";
+  mostrarActividadesEnModal(fecha);
+}
+
+function mostrarActividadesEnModal(fecha) {
+  const actividades = cargarActividades();
+  listaActividades.innerHTML = "";
+
+  if (actividades[fecha]) {
+    actividades[fecha].forEach((act, index) => {
+      const div = document.createElement("div");
+      div.classList.add("actividad-item");
+
+      const texto = document.createElement("span");
+      texto.textContent = `${act.hora} - ${act.descripcion}`;
+
+      const btnEliminar = document.createElement("button");
+      btnEliminar.textContent = "Eliminar";
+      btnEliminar.classList.add("boton-eliminar");
+
+      btnEliminar.onclick = () => {
+        actividades[fecha].splice(index, 1);
+        if (actividades[fecha].length === 0) {
+          delete actividades[fecha];
+        }
+        guardarActividades(actividades);
+        mostrarActividadesEnModal(fecha);
+
+        // Actualiza el calendario correctamente según la fecha real
+        const fechaObj = new Date(fecha);
+        const año = fechaObj.getFullYear();
+        const mes = fechaObj.getMonth() + 1;
+        generarCalendario(año, mes);
+      };
+
+      div.appendChild(texto);
+      div.appendChild(btnEliminar);
+      listaActividades.appendChild(div);
+    });
+  }
+}
+
+// Guardar actividad
+formActividad.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const fecha = inputFecha.value;
+  const hora = inputHora.value;
+  const descripcion = inputDescripcion.value;
+
+  if (!hora || !descripcion) return;
+
+  const actividades = cargarActividades();
+
+  if (!actividades[fecha]) {
+    actividades[fecha] = [];
+  }
+
+  const idx = actividades[fecha].findIndex(act => act.hora === hora);
+  if (idx !== -1) {
+    actividades[fecha][idx].descripcion = descripcion;
+  } else {
+    actividades[fecha].push({ hora, descripcion });
+    actividades[fecha].sort((a, b) => a.hora.localeCompare(b.hora));
+  }
+
+  guardarActividades(actividades);
+  mostrarActividadesEnModal(fecha);
+
+  // 🔄 Regenera el calendario basado en la fecha modificada, no solo el selector
+  const fechaObj = new Date(fecha);
+  const año = fechaObj.getFullYear();
+  const mes = fechaObj.getMonth() + 1;
+  generarCalendario(año, mes);
+
+  formActividad.reset();
+});
